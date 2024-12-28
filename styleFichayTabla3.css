@@ -181,7 +181,7 @@ body {
 
 /* Ajustes actualizados para las características del jugador */
 .fut-player-card .player-card-bottom .player-info .player-features {
-    margin-left: 60px;
+    margin-left: 10px;
     display: flex;
     justify-content: center;
     gap: 20px;
