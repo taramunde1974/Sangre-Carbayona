@@ -181,39 +181,40 @@ body {
 
 /* Ajustes actualizados para las características del jugador */
 .fut-player-card .player-card-bottom .player-info .player-features {
-    margin-left: 30px;
+    margin-left: 20px;  /* Reducido de 30px */
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;  /* Reducido de 20px */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
-    padding: 0 1.5rem;
-    border-right: 10px solid rgba(233, 204, 116, 0.1);
+    padding: 0 0.8rem;  /* Reducido de 1.5rem */
+    border-right: 2px solid rgba(233, 204, 116, 0.1);
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-    gap: 8px;
+    margin-bottom: 4px;  /* Reducido de 8px */
+    gap: 4px;  /* Reducido de 8px */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col .player-feature-title {
-    font-size: 1.1rem;
+    font-size: 0.85rem;  /* Reducido de 1.1rem */
     color: #e9cc74;
-    min-width: 45px;
+    min-width: 35px;  /* Reducido de 45px */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col .player-feature-value {
-    font-size: 1.2rem;
+    font-size: 0.85rem;  /* Reducido de 1.2rem */
     color: #e9cc74;
-    font-weight: 200;
-    margin-left: 5px;
+    font-weight: 400;
+    margin-left: 2px;  /* Reducido de 5px */
 }
 
+/* Ajuste específico para el valor de Internacional (ESP_sub-21) */
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span:last-child .player-feature-value {
-    font-size: 1rem;
+    font-size: 0.75rem;  /* Reducido aún más para el texto largo */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
