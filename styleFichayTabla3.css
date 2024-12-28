@@ -181,42 +181,44 @@ body {
 
 /* Ajustes actualizados para las características del jugador */
 .fut-player-card .player-card-bottom .player-info .player-features {
-    margin-left: 20px;  /* Reducido de 30px */
     display: flex;
     justify-content: center;
-    gap: 10px;  /* Reducido de 20px */
+    margin-left: 0; /* Eliminamos el margen izquierdo */
+    gap: 5px; /* Reducimos el espacio entre columnas */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
-    padding: 0 0.8rem;  /* Reducido de 1.5rem */
-    border-right: 2px solid rgba(233, 204, 116, 0.1);
+    padding: 0 5px; /* Reducimos el padding */
+    border-right: 1px solid rgba(233, 204, 116, 0.1);
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
     display: flex;
     align-items: center;
-    margin-bottom: 4px;  /* Reducido de 8px */
-    gap: 4px;  /* Reducido de 8px */
+    margin-bottom: 2px;
+    font-size: 0.7rem; /* Tamaño base más pequeño */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col .player-feature-title {
-    font-size: 0.85rem;  /* Reducido de 1.1rem */
-    color: #e9cc74;
-    min-width: 35px;  /* Reducido de 45px */
+    font-size: 0.7rem;
+    min-width: 25px;
 }
 
+/* Valores de las estadísticas (1, 46, -41, etc) */
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col .player-feature-value {
-    font-size: 0.85rem;  /* Reducido de 1.2rem */
-    color: #e9cc74;
-    font-weight: 400;
-    margin-left: 2px;  /* Reducido de 5px */
+    font-size: 0.7rem;
+    margin-left: 2px;
 }
 
-/* Ajuste específico para el valor de Internacional (ESP_sub-21) */
+/* Específicamente para el valor ESP_sub-21 */
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span:last-child .player-feature-value {
-    font-size: 0.75rem;  /* Reducido aún más para el texto largo */
+    font-size: 0.65rem;
+    /* Si aún es muy grande, podemos reducir más */
 }
-
+/* Eliminamos márgenes negativos que pudieran estar causando problemas */
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
+    margin-right: 0;
+}
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
     border: 0;
 }
