@@ -210,9 +210,8 @@ body {
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
-    margin-left: 0.3rem;
+    margin-righ: 0.3rem;
     font-weight: 250;
-    font-size: 94px;
     gap: 10px;
 }
 
