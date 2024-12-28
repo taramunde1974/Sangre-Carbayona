@@ -224,6 +224,8 @@ body {
     border-spacing: 0;
     border-color: blue;
     border-width: 4px;
+    background: url('https://i.postimg.cc/VN3yzqm5/Real-Oviedo-de-fondo-b-n.png') no-repeat;
+    background-size: cover;
 }
 
 .tg td {
@@ -275,22 +277,17 @@ body {
 table {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px; /* Puedes ajustar el valor según sea necesario para el margen superior */
-    margin-bottom: 50px; /* Puedes ajustar el valor según sea necesario para el margen inferior */
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .tg td, .tg th {
-    padding: 10px; /* Ajusta el valor según sea necesario para el espacio arriba/abajo y espacio izquierda/derecha */
+    padding: 10px;
     text-align: left;
 }
 
 h1 {
     color: #0e0eec;
-}
-
-.tg {
-    background: url('https://i.postimg.cc/VN3yzqm5/Real-Oviedo-de-fondo-b-n.png') no-repeat;
-    background-size: cover;
 }
 
 .whatsapp-button {
