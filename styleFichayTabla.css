@@ -210,7 +210,7 @@ body {
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
-    margin-left: 1.3rem;
+    margin-left: 0.3rem;
     font-weight: 250;
     gap: 10px;
 }
