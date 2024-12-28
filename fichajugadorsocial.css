@@ -1,0 +1,208 @@
+/* Combinación de estilos sociales y de tarjeta */
+
+/* Estilos globales */
+body {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 200;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+#miBody {
+    background: #0e0eec;
+}
+
+/* Estilos de iconos sociales */
+#miBody .sc-social-icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#miBody .sc-icon-group {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#miBody .sc-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#miBody .sc-social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+#miBody .sc-icon-text {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+#miBody .sc-icon-group:hover {
+    transform: translateY(-5px);
+}
+
+#miBody .sc-icon-group:hover .sc-icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* Estilos de la tarjeta */
+.fut-player-card {
+    position: relative;
+    width: 300px;
+    height: 485px;
+    background-image: url(https://i.postimg.cc/FKGBJGHN/Tarjeta-Real-Oviedo-3.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 3.8rem 0;
+    z-index: 2;
+    transition: 200ms ease-in;
+    left: 30%;
+}
+
+.fut-player-card .player-card-top {
+    position: relative;
+    display: flex;
+    color: #0e0eec;
+    padding: 0 1.5rem;
+}
+
+.fut-player-card .player-card-top .player-master-info {
+    position: absolute;
+    line-height: 2.2rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+.fut-player-card .player-card-top .player-master-info .player-rating {
+    font-size: 2rem;
+}
+
+.fut-player-card .player-card-top .player-master-info .player-rating2 {
+    font-size: 1.2rem;
+}
+
+.fut-player-card .player-card-top .player-master-info .player-position {
+    font-size: 1.4rem;
+}
+
+.fut-player-card .player-card-top .player-master-info .player-nation,
+.fut-player-card .player-card-top .player-master-info .player-region,
+.fut-player-card .player-card-top .player-master-info .player-club {
+    display: block;
+    width: 2rem;
+    height: 25px;
+    margin: 0.3rem 0;
+}
+
+.fut-player-card .player-card-top .player-master-info .player-nation img,
+.fut-player-card .player-card-top .player-master-info .player-region img,
+.fut-player-card .player-card-top .player-master-info .player-club img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fut-player-card .player-card-top .player-picture {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.fut-player-card .player-card-top .player-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    right: -1.5rem;
+}
+
+.fut-player-card .player-card-bottom .player-info {
+    display: block;
+    padding: 0.3rem 0;
+    color: #e9cc74;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.fut-player-card .player-card-bottom .player-info .player-name {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(233, 204, 116, 0.1);
+    padding-bottom: 0.3rem;
+}
+
+.fut-player-card .player-card-bottom .player-info .player-features {
+    margin-left: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
+    border-right: 2px solid rgba(233, 204, 116, 0.1);
+    padding: 0 1.3rem;
+}
+
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
+    display: flex;
+    font-size: 1rem;
+}
+
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value,
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
+    margin-left: 0.3rem;
+    font-weight: 250;
+}
+
+/* Estilos de tabla */
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: blue;
+    border-width: 4px;
+    background: url('https://i.postimg.cc/VN3yzqm5/Real-Oviedo-de-fondo-b-n.png') no-repeat;
+    background-size: cover;
+}
+
+.tg td, .tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: blue;
+}
+
+table {
+    margin: 50px auto;
+}
