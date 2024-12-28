@@ -161,10 +161,10 @@ body {
     z-index: 2;
 }
 
-/* Ajustes actualizados para el nombre del jugador */
+/* Ajuste para el nombre del jugador si es necesario */
 .fut-player-card .player-card-bottom .player-info .player-name {
     width: 90%;
-    font-size: 1.4rem;
+    font-size: 1.1rem;  /* Reducido de 1.4rem */
     text-align: center;
     text-transform: uppercase;
     border-bottom: 2px solid rgba(233, 204, 116, 0.1);
