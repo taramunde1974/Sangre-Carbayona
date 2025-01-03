@@ -1,88 +1,224 @@
-/* CSS Base */
+/* styleficha2.css */
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #f4f4f9; /* Cambia esto si necesitas otro color */
-    margin: 0;
-    padding: 0;
+	font-family: 'Saira Semi Condensed', sans-serif;
+	font-weight: 400;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	
+}
+#miBody {
+  background: #0e0eec;
 }
 
-/* Player Card */
+/*
+  *** fut-player-card styles ***
+*/
+
 .fut-player-card2 {
-    width: 250px;
-    height: auto;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 10px auto;
-    transition: transform 0.3s ease;
+	position: relative;
+	width: 300px;
+	height: 485px;
+	background-image: url(https://i.postimg.cc/XNQFxr16/Tarjeta-Real-Oviedo-3-Lazo.png);
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 3.8rem 0;
+	z-index: 2;
+	-webkit-transition: 200ms ease-in;
+	-o-transition: 200ms ease-in;
+	transition: 200ms ease-in;
+  left: 30%;
+}
+.fut-player-card2 .player-card-top {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: #0e0eec;
+	padding: 0 1.5rem;
 }
 
-.fut-player-card2:hover {
-    transform: scale(1.05);
+.fut-player-card2 .player-card-top .player-master-info {
+	position: absolute;
+	line-height: 2.2rem;
+	font-weight: 300;
+	padding: 1.5rem 0;
+	text-transform: uppercase;
+    
+}
+.fut-player-card2 .player-card-top .player-master-info .player-rating {
+	font-size: 2rem;
+}
+  
+ .fut-player-card2 .player-card-top .player-master-info .player-rating2 {
+	font-size: 1.2rem;
+}   
+
+.fut-player-card2 .player-card-top .player-master-info .player-position {
+	font-size: 1.4rem;
 }
 
-/* Player Card Top Section */
-.player-card-top {
-    background-color: #0074D9; /* Cambia este color si necesitas otro */
-    padding: 10px;
-    position: relative;
-    color: #ffffff;
+.fut-player-card2 .player-card-top .player-master-info .player-nation {
+	display: block;
+	width: 2rem;
+	height: 25px;
+	margin: 0.3rem 0;
+}
+.fut-player-card2 .player-card-top .player-master-info .player-nation img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+  
+.fut-player-card2 .player-card-top .player-master-info .player-region {
+	display: block;
+	width: 2rem;
+	height: 25px;
+	margin: 0.3rem 0;
+}
+.fut-player-card2 .player-card-top .player-master-info .player-region img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}  
+  
+
+.fut-player-card2 .player-card-top .player-master-info .player-club {
+	display: block;
+	width: 2.1rem;
+	height: 40px;
 }
 
-.player-rating2, .player-position {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 5px 0;
+.fut-player-card2 .player-card-top .player-master-info .player-club img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+.fut-player-card2 .player-card-top .player-picture {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
-.player-nation img, .player-region img, .player-club img {
-    width: 30px;
-    height: auto;
-    border-radius: 5px;
-    margin: 0 2px;
+.fut-player-card2 .player-card-top .player-picture img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+	position: relative;
+	right: -1.5rem;
+	bottom: 0;
+}
+fut-player-card2 .player-card-top .player-picture .player-extra {
+	position: absolute;
+	right: 0;
+	bottom: -0.5rem;
+	overflow: hidden;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 100%;
+	height: 2rem;
+	padding: 0 1.5rem;
+	text-align: right;
+	background: none;
 }
 
-/* Player Picture */
-.player-picture img {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    margin: 10px auto;
-    display: block;
+.fut-player-card2 .player-card-top .player-picture .player-extra span {
+	margin-left: 0.6rem;
+	text-shadow: 2px 2px #333;
 }
 
-/* Player Info Section */
-.player-card-bottom {
-    padding: 15px;
-    text-align: center;
-    background-color: #f4f4f9; /* Cambia este color si necesitas otro */
+.fut-player-card2 .player-card-bottom {
+	position: relative;
+}
+.fut-player-card2 .player-card-bottom .player-info {
+	display: block;
+	padding: 0.3rem 0;
+	color: #e9cc74;
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	z-index: 2;
 }
 
-.player-name span {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
+.fut-player-card2 .player-card-bottom .player-info .player-name {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 1.0rem;
+	text-transform: uppercase;
+	border-bottom: 2px solid rgba(233, 204, 116, 0.1);
+	padding-bottom: 0.3rem;
+	overflow: hidden;
+    margin-left: 10px;
+}
+.fut-player-card2 .player-card-bottom .player-info .player-name span {
+	display: block;
+	text-shadow: 2px 2px #111;
 }
 
-.player-features {
+.fut-player-card2 .player-card-bottom .player-info .player-features {
+	margin-left: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 8px; /* Reduced from 10px */
+}
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col {
+	border-right: 2px solid rgba(233, 204, 116, 0.1);
+	padding: 0 1.1rem; /* Reduced from 1.3rem to accommodate smaller text */
+    margin-right: -20px;
 }
 
-.player-feature-title {
-    font-size: 12px;
-    font-weight: bold;
-    color: #0074D9;
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0.85rem; /* Reduced from 1.0rem */
+	
+}
+/* Ensure the text remains visible and clear */
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
+    margin-bottom: 2px; /* Add small spacing between rows */
+    align-items: center; /* Center items vertically */
+}
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
+	margin-left: 0.2rem;
+    font-weight: 250;
+    font-size: 0.8rem; /* Smaller size for values */
+}
+  
+
+
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
+    margin-left: 0.2rem;
+    font-weight: 250;
+    font-size: 0.8rem; /* Smaller size for titles */
+}
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col:last-child {
+	border: 0;
 }
 
-.player-feature-value {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-}
 .tg  {border-collapse:collapse;border-spacing:0;border-color:blue;border-width:4px}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:4px;overflow:hidden;word-break:normal;border-color:blue;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:4px;overflow:hidden;word-break:normal;border-color:blue;}
