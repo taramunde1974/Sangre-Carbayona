@@ -49,7 +49,7 @@ body {
 	padding: 0 1.5rem;
 }
 
-.fut-player-card .player-card-top .player-master-info {
+.fut-player-card2 .player-card-top .player-master-info {
 	position: absolute;
 	line-height: 2.2rem;
 	font-weight: 300;
@@ -57,38 +57,38 @@ body {
 	text-transform: uppercase;
     
 }
-.fut-player-card .player-card-top .player-master-info .player-rating {
+.fut-player-card2 .player-card-top .player-master-info .player-rating {
 	font-size: 2rem;
 }
   
- .fut-player-card .player-card-top .player-master-info .player-rating2 {
+ .fut-player-card2 .player-card-top .player-master-info .player-rating2 {
 	font-size: 1.2rem;
 }   
 
-.fut-player-card .player-card-top .player-master-info .player-position {
+.fut-player-card2 .player-card-top .player-master-info .player-position {
 	font-size: 1.4rem;
 }
 
-.fut-player-card .player-card-top .player-master-info .player-nation {
+.fut-player-card2 .player-card-top .player-master-info .player-nation {
 	display: block;
 	width: 2rem;
 	height: 25px;
 	margin: 0.3rem 0;
 }
-.fut-player-card .player-card-top .player-master-info .player-nation img {
+.fut-player-card2 .player-card-top .player-master-info .player-nation img {
 	width: 100%;
 	height: 100%;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
   
-.fut-player-card .player-card-top .player-master-info .player-region {
+.fut-player-card2 .player-card-top .player-master-info .player-region {
 	display: block;
 	width: 2rem;
 	height: 25px;
 	margin: 0.3rem 0;
 }
-.fut-player-card .player-card-top .player-master-info .player-region img {
+.fut-player-card2 .player-card-top .player-master-info .player-region img {
 	width: 100%;
 	height: 100%;
 	-o-object-fit: contain;
@@ -96,26 +96,26 @@ body {
 }  
   
 
-.fut-player-card .player-card-top .player-master-info .player-club {
+.fut-player-card2 .player-card-top .player-master-info .player-club {
 	display: block;
 	width: 2.1rem;
 	height: 40px;
 }
 
-.fut-player-card .player-card-top .player-master-info .player-club img {
+.fut-player-card2 .player-card-top .player-master-info .player-club img {
 	width: 100%;
 	height: 100%;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
-.fut-player-card .player-card-top .player-picture {
+.fut-player-card2 .player-card-top .player-picture {
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
-.fut-player-card .player-card-top .player-picture img {
+.fut-player-card2 .player-card-top .player-picture img {
 	width: 100%;
 	height: 100%;
 	-o-object-fit: contain;
@@ -124,7 +124,7 @@ body {
 	right: -1.5rem;
 	bottom: 0;
 }
-fut-player-card .player-card-top .player-picture .player-extra {
+fut-player-card2 .player-card-top .player-picture .player-extra {
 	position: absolute;
 	right: 0;
 	bottom: -0.5rem;
@@ -139,15 +139,15 @@ fut-player-card .player-card-top .player-picture .player-extra {
 	background: none;
 }
 
-.fut-player-card .player-card-top .player-picture .player-extra span {
+.fut-player-card2 .player-card-top .player-picture .player-extra span {
 	margin-left: 0.6rem;
 	text-shadow: 2px 2px #333;
 }
 
-.fut-player-card .player-card-bottom {
+.fut-player-card2 .player-card-bottom {
 	position: relative;
 }
-.fut-player-card .player-card-bottom .player-info {
+.fut-player-card2 .player-card-bottom .player-info {
 	display: block;
 	padding: 0.3rem 0;
 	color: #e9cc74;
@@ -158,7 +158,7 @@ fut-player-card .player-card-top .player-picture .player-extra {
 	z-index: 2;
 }
 
-.fut-player-card .player-card-bottom .player-info .player-name {
+.fut-player-card2 .player-card-bottom .player-info .player-name {
 	width: 100%;
 	display: block;
 	text-align: center;
@@ -169,12 +169,12 @@ fut-player-card .player-card-top .player-picture .player-extra {
 	overflow: hidden;
     margin-left: 10px;
 }
-.fut-player-card .player-card-bottom .player-info .player-name span {
+.fut-player-card2 .player-card-bottom .player-info .player-name span {
 	display: block;
 	text-shadow: 2px 2px #111;
 }
 
-.fut-player-card .player-card-bottom .player-info .player-features {
+.fut-player-card2 .player-card-bottom .player-info .player-features {
 	margin-left: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -184,13 +184,13 @@ fut-player-card .player-card-top .player-picture .player-extra {
     justify-content: center;
     gap: 8px; /* Reduced from 10px */
 }
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col {
 	border-right: 2px solid rgba(233, 204, 116, 0.1);
 	padding: 0 1.1rem; /* Reduced from 1.3rem to accommodate smaller text */
     margin-right: -20px;
 }
 
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -198,11 +198,11 @@ fut-player-card .player-card-top .player-picture .player-extra {
 	
 }
 /* Ensure the text remains visible and clear */
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
     margin-bottom: 2px; /* Add small spacing between rows */
     align-items: center; /* Center items vertically */
 }
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
 	margin-left: 0.2rem;
     font-weight: 250;
     font-size: 0.8rem; /* Smaller size for values */
@@ -210,12 +210,12 @@ fut-player-card .player-card-top .player-picture .player-extra {
   
 
 
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
     margin-left: 0.2rem;
     font-weight: 250;
     font-size: 0.8rem; /* Smaller size for titles */
 }
-.fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col:last-child {
 	border: 0;
 }
 
