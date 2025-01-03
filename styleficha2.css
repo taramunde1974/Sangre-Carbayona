@@ -25,7 +25,7 @@ body {
   *** fut-player-card styles ***
 */
 
-.fut-player-card {
+.fut-player-card2 {
 	position: relative;
 	width: 300px;
 	height: 485px;
@@ -40,7 +40,7 @@ body {
 	transition: 200ms ease-in;
   left: 30%;
 }
-.fut-player-card .player-card-top {
+.fut-player-card2 .player-card-top {
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
