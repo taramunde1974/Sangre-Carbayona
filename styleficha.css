@@ -40,6 +40,11 @@ body {
 	transition: 200ms ease-in;
   left: 30%;
 }
+
+.fut-player-card2.ficha1 {
+  background-image: url("https://i.postimg.cc/FKGBJGHN/Tarjeta-Real-Oviedo-3.png");
+}
+
 .fut-player-card .player-card-top {
 	position: relative;
 	display: -webkit-box;
