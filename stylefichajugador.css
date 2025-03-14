@@ -39,7 +39,7 @@ body {
 	-webkit-transition: 200ms ease-in;
 	-o-transition: 200ms ease-in;
 	transition: 200ms ease-in;
-  left: 30%;
+        left: 30%;
 }
 
 .fut-player-card .player-card-top {
