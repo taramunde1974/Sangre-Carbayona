@@ -1,4 +1,4 @@
-
+        /* javaredessociales.js */
         const urlToShare = window.location.href;
         const textToShare = "Mira este contenido interesante";
 
