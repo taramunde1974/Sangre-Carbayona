@@ -15,7 +15,6 @@ body {
 	width: 100%;
 	height: auto;
 	min-height: 300px;
-	
 }
   
 #miBody {
@@ -39,7 +38,7 @@ body {
 	-webkit-transition: 200ms ease-in;
 	-o-transition: 200ms ease-in;
 	transition: 200ms ease-in;
-        left: 30%;
+  left: 30%;
 }
 
 .fut-player-card .player-card-top {
@@ -193,13 +192,13 @@ body {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-  gap: 10px;
+        gap: 10px;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
 	border-right: 2px solid rgba(233, 204, 116, 0.1);
-	padding: 0 1.3rem;
-    margin-right: -20px;
+	padding: 0 0.5rem;
+        margin-right: -20px;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span {
@@ -213,21 +212,23 @@ body {
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
 	margin-left: 0.3rem;
 	font-weight: 250;
-  gap: 10px;
+        gap: 10px;
 }
   
 
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
     margin-left: 0.3rem;
-	font-weight: 250;
-  gap: 10px;
+    font-weight: 250;
+    gap: 10px;
 }
  
   
-
-  
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
+    border: 0;
+}
+ 
   
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
-	border: 0;
+   border: 0;
 }
