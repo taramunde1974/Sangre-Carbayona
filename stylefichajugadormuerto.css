@@ -19,7 +19,7 @@ body {
 }
   
 #miBody {
-        background: #0e0eec;
+  background: #0e0eec;
 }
 
 /*
@@ -30,7 +30,7 @@ body {
 	position: relative;
 	width: 300px;
 	height: 485px;
-	background-image: url(https://i.postimg.cc/XNQFxr16/Tarjeta-Real-Oviedo-3-Lazo.png);
+	background-image: url(https://i.postimg.cc/FKGBJGHN/Tarjeta-Real-Oviedo-3.png);
 	background-position: center center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body {
 	-webkit-transition: 200ms ease-in;
 	-o-transition: 200ms ease-in;
 	transition: 200ms ease-in;
-  left: 30%;
+        left: 30%;
 }
 
 .fut-player-card2 .player-card-top {
@@ -185,53 +185,45 @@ body {
 	text-shadow: 2px 2px #111;
 }
 
-.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
+.fut-player-card2 .player-card-bottom .player-info .player-features {
+	margin-left: 24px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	font-size: 0.85rem; /* Reduced from 1.0rem */
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+  gap: 10px;
 }
 
 .fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col {
 	border-right: 2px solid rgba(233, 204, 116, 0.1);
-	padding: 0 1.1rem; /* Reduced from 1.3rem to accommodate smaller text */
-    margin-right: -20px;
+	padding: 0 0.5rem;
+        margin-right: -20px;
 }
 
-/* Specific styles for the titles and values */
-.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
-    margin-left: 0.2rem;
-    font-weight: 250;
-    font-size: 0.8rem; /* Smaller size for titles */
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 1.0rem;
+	
 }
 
 .fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-value {
-    margin-left: 0.2rem;
-    font-weight: 250;
-    font-size: 0.8rem; /* Smaller size for values */
+	margin-left: 0.3rem;
+	font-weight: 250;
+  gap: 10px;
 }
+  
 
-/* Adjust spacing between features */
-.fut-player-card2 .player-card-bottom .player-info .player-features {
-    margin-left: 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 8px; /* Reduced from 10px */
-}
 
-/* Ensure the text remains visible and clear */
-.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span {
-    margin-bottom: 2px; /* Add small spacing between rows */
-    align-items: center; /* Center items vertically */
+.fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col span .player-feature-title {
+    margin-left: 0.3rem;
+	font-weight: 250;
+  gap: 10px;
 }
  
-  
-
-  
   
 .fut-player-card2 .player-card-bottom .player-info .player-features .player-features-col:last-child {
 	border: 0;
