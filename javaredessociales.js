@@ -11,8 +11,9 @@
         }
 
         document.getElementById('share-whatsapp').onclick = function() {
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(textToShare)}%20${encodeURIComponent(urlToShare)}`, '_blank');
-        }
+    // Solo compartir la URL sin texto predefinido para que use las metaetiquetas OG
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`, '_blank');
+      }
 
         document.getElementById('share-telegram').onclick = function() {
             window.open(`https://t.me/share/url?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(textToShare)}`, '_blank');
