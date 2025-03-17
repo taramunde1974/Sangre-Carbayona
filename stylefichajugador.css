@@ -232,3 +232,15 @@ body {
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
    border: 0;
 }
+
+
+.player-extra-image {
+    text-align: center; /* O "right" si prefieres más a la derecha */
+    margin-top: 10px;
+}
+
+.player-extra-image img {
+    transform: rotate(20deg);
+    width: 70px;
+    height: auto;
+}
