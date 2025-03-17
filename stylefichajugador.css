@@ -235,12 +235,15 @@ body {
 
 
 .player-extra-image {
-    text-align: right;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
 }
 
 .player-extra-image img {
     transform: rotate(15deg);
     width: 70px;
     height: auto;
+    display: block;
 }
