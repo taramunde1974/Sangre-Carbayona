@@ -228,23 +228,7 @@ body {
     border: 0;
 }
  
-
-
-
-.player-extra-image2 {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    text-align: right;
-    margin-top: 10px;
-    z-index: 10;
-    transform: rotate(15deg);
-	
-}
-
-.player-extra-image2 img {
-    transform: rotate(15deg);
-    width: 50px;
-    height: auto;
-    display: block;
+  
+.fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
+   border: 0;
 }
