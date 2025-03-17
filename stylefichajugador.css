@@ -247,7 +247,7 @@ body {
 
 .player-extra-image2 img {
     transform: rotate(15deg);
-    width: 150px;
+    width: 50px;
     height: auto;
     display: block;
 }
