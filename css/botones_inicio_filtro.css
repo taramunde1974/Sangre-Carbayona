@@ -1,0 +1,27 @@
+.header-container {
+            position: relative;
+            text-align: left; /* Alinear contenido a la izquierda */
+        }
+        .logo {
+            width: 100%; /* Ajustar el ancho de la imagen según sea necesario */
+            display: block; /* Para asegurar que el texto se coloque debajo */
+        }
+        .inicio-button {
+            position: absolute;
+            bottom: 10px; /* Posición del botón desde la parte inferior */
+            left: 10px; /* Posición del botón desde la izquierda */
+            background-color: #007BFF; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            text-align: center; /* Alinear texto al centro */
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Mostrar como bloque en línea */
+            font-size: 16px; /* Tamaño de fuente */
+            margin: 4px 2px; /* Márgenes */
+            cursor: pointer; /* Cambiar el cursor al pasar por encima */
+            border-radius: 5px; /* Borde redondeado */
+        }
+        .inicio-button:hover {
+            background-color: #0056b3; /* Cambiar color de fondo al pasar por encima */
+        }
