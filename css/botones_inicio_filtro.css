@@ -2,26 +2,26 @@
 
 .header-container {
     position: relative;
-    text-align: left;
+    text-align: left; /* Esto alinea el contenido de texto dentro del contenedor a la izquierda */
 }
 
 .logo {
     width: 100%;
-    display: block;
+    display: block; /* Asegura que la imagen ocupa todo el ancho disponible */
 }
 
-/* Posiciona el botón sobre la imagen usando posición absoluta */
+/* Posiciona el botón fuera de la imagen, abajo y a la izquierda */
 .inicio-button {
-    position: absolute; 
-    top: 10px;          /* Ajusta la distancia desde la parte superior */
-    left: 10px;         /* Ajusta la distancia desde la izquierda */
+    position: absolute;
+    bottom: -10px; /* Ajusta este valor si necesitas más o menos espacio */
+    left: 0; /* Lo alinea completamente a la izquierda del contenedor */
     background-color: #0e0eec;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
-    z-index: 1;         /* Asegura que el botón esté sobre la imagen */
+    z-index: 1; /* Asegura que el botón esté sobre cualquier otro contenido si fuera necesario */
 }
 
 .inicio-button:hover {
