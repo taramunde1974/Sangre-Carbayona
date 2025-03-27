@@ -12,7 +12,7 @@
 
 .inicio-button {
     display: inline-block; /* Mostrar como bloque en línea */
-    margin-top: -60px; /* Ajustar el margen superior para que esté justo debajo de la imagen */
+    margin-top: -30px; /* Ajustar el margen superior para que esté justo debajo de la imagen */
     margin-left: 10px; /* Ajustar el margen izquierdo para que esté a la izquierda */
     background-color: #007BFF; /* Color de fondo del botón */
     color: white; /* Color del texto del botón */
