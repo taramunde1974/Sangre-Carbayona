@@ -17,19 +17,20 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .logo {
     width: 100%;
     height: auto;
-    max-width: 100%; /* Asegurarse de que no supere el ancho del header */
     object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el espacio */
+    max-height: 100px; /* Altura máxima para dispositivos móviles */
 }
 
 /* Estilos específicos para dispositivos de escritorio */
 @media (min-width: 768px) {
     .logo {
-        max-width: 100%; /* Asegurarse de que no supere el ancho del header */
-        object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el espacio */
+        max-height: 150px; /* Altura máxima para dispositivos de escritorio */
     }
 }
