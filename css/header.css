@@ -24,7 +24,7 @@ header {
     width: 100%;
     height: auto;
     max-height: 100px; /* Altura máxima para dispositivos móviles */
-    object-fit: contain; /* Contener la imagen dentro del contenedor */
+    object-fit: cover; /* Contener la imagen dentro del contenedor */
 }
 
 /* Estilos específicos para dispositivos de escritorio */
