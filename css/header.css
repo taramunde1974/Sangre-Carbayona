@@ -22,5 +22,14 @@ header {
 .logo {
     width: 100%;
     height: auto;
-    max-width: 300px; /* Ancho máximo para evitar que la imagen sea demasiado grande */
+    max-width: 100%; /* Asegurarse de que no supere el ancho del header */
+    object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el espacio */
+}
+
+/* Estilos específicos para dispositivos de escritorio */
+@media (min-width: 768px) {
+    .logo {
+        max-width: 100%; /* Asegurarse de que no supere el ancho del header */
+        object-fit: cover; /* Mantener la relación de aspecto y cubrir todo el espacio */
+    }
 }
