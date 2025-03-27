@@ -14,7 +14,7 @@
     display: inline-block; /* Mostrar como bloque en línea */
     margin-top: -30px; /* Ajustar el margen superior para que esté justo debajo de la imagen */
     margin-left: 10px; /* Ajustar el margen izquierdo para que esté a la izquierda */
-    background-color: #007BFF; /* Color de fondo del botón */
+    background-color: #0e0eec; /* Color de fondo del botón */
     color: white; /* Color del texto del botón */
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado interno del botón */
