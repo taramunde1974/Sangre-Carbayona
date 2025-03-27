@@ -8,31 +8,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    width: 100%; /* Asegura que el body ocupe todo el ancho */
 }
 
 header {
-    width: 100vw; /* Usa viewport width para garantizar el ancho completo */
+    width: 100%;
     background-color: #f8f9fa; /* Fondo blanco claro */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 10px 0;
     position: relative;
     overflow: hidden;
 }
 
 .logo {
-    width: 150%; /* Ocupa el 100% del ancho del header */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Cubre el espacio manteniendo la relación de aspecto */
-    max-height: 100px; /* Altura máxima por defecto (móvil) */
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Altura máxima para dispositivos móviles */
+    object-fit: contain; /* Contener la imagen dentro del contenedor */
 }
 
 /* Estilos específicos para dispositivos de escritorio */
 @media (min-width: 768px) {
     .logo {
-        max-height: 150px; /* Altura máxima para escritorio */
-        width: 100%; /* Refuerza que ocupe todo el ancho en escritorio */
+        max-height: 150px; /* Altura máxima para dispositivos de escritorio */
     }
 }
