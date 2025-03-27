@@ -24,7 +24,9 @@ header {
 .logo-container {
     width: 100%;
     height: 100px; /* Altura fija para el header en dispositivos móviles */
-    background-image: url('https://i.postimg.cc/FsDWDVvh/Sangre-Carbayona-C-D-Oviedo-Stadium-Ovetense.webp');
+    background-image: url('https://cdn.jsdelivr.net/gh/taramunde1974/Sangre-Carbayona@main/images/Sangre-Carbayona-C-D-Oviedo-Stadium-Ovetense.jpg
+
+');
     background-size: contain; /* Contener la imagen dentro del contenedor */
     background-position: center; /* Centrar la imagen */
     background-repeat: no-repeat; /* No repetir la imagen */
