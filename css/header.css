@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    width: 100%; /* Ocupa el 100% del ancho del header */
+    width: 150%; /* Ocupa el 100% del ancho del header */
     height: auto; /* Mantiene la proporción */
     object-fit: cover; /* Cubre el espacio manteniendo la relación de aspecto */
     max-height: 100px; /* Altura máxima por defecto (móvil) */
