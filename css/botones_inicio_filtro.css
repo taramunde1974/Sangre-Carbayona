@@ -1,30 +1,29 @@
-/* styles botones_inicio_filtro.css */
+/* botones_inicio_filtro.css */
 
 .header-container {
     position: relative;
-    text-align: left; /* Alinear contenido a la izquierda */
+    text-align: left;
 }
 
 .logo {
-    width: 100%; /* Ajustar el ancho de la imagen según sea necesario */
-    display: block; /* Para asegurar que el botón se coloque debajo */
+    width: 100%;
+    display: block;
 }
 
+/* Posiciona el botón sobre la imagen usando posición absoluta */
 .inicio-button {
-    display: inline-block; /* Mostrar como bloque en línea */
-    margin-top: 10px; /* Espacio positivo para separarlo de la imagen */
-    margin-left: 0; /* Quitamos el margen izquierdo innecesario */
-    background-color: #0e0eec; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    text-align: center; /* Alinear texto al centro */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambiar el cursor al pasar por encima */
-    border-radius: 5px; /* Borde redondeado */
+    position: absolute; 
+    top: 10px;          /* Ajusta la distancia desde la parte superior */
+    left: 10px;         /* Ajusta la distancia desde la izquierda */
+    background-color: #0e0eec;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1;         /* Asegura que el botón esté sobre la imagen */
 }
 
 .inicio-button:hover {
-    background-color: #0056b3; /* Cambiar color de fondo al pasar por encima */
+    background-color: #0056b3;
 }
