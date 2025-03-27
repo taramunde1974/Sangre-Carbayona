@@ -7,13 +7,13 @@
 
 .logo {
     width: 100%; /* Ajustar el ancho de la imagen según sea necesario */
-    display: block; /* Para asegurar que el texto se coloque debajo */
+    display: block; /* Para asegurar que el botón se coloque debajo */
 }
 
 .inicio-button {
     display: inline-block; /* Mostrar como bloque en línea */
-    margin-top: -5px; /* Ajustar el margen superior para que esté justo debajo de la imagen */
-    margin-left: 10px; /* Ajustar el margen izquierdo para que esté a la izquierda */
+    margin-top: 10px; /* Espacio positivo para separarlo de la imagen */
+    margin-left: 0; /* Quitamos el margen izquierdo innecesario */
     background-color: #0e0eec; /* Color de fondo del botón */
     color: white; /* Color del texto del botón */
     border: none; /* Sin borde */
