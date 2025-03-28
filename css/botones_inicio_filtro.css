@@ -2,13 +2,14 @@
 
 
 .inicio-button {
-    display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+    display: block;
     background-color: #0e0eec;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
-    margin: 10px 0; /* Espacio arriba y abajo del botón */
-    text-align: center; /* Centra el texto del botón */
+    margin: 10px auto; /* Centra horizontalmente */
+    text-align: center;
+    width: fit-content; /* El botón solo ocupa el ancho de su contenido */
 }
