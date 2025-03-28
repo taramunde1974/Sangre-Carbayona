@@ -1,29 +1,31 @@
 /* botones_inicio_filtro.css */
 
+
 .header-container {
-    position: relative;
-    text-align: left; /* Esto alinea el contenido de texto dentro del contenedor a la izquierda */
+  position: relative;
+  text-align: left;
 }
 
-.logo {
-    width: 100%;
-    display: block; /* Asegura que la imagen ocupa todo el ancho disponible */
-}
-
-/* Posiciona el botón fuera de la imagen, abajo y a la izquierda */
 .inicio-button {
-    position: absolute;
-    bottom: -10px; /* Ajusta este valor si necesitas más o menos espacio */
-    left: 0; /* Lo alinea completamente a la izquierda del contenedor */
-    background-color: #0e0eec;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    z-index: 1; /* Asegura que el botón esté sobre cualquier otro contenido si fuera necesario */
+  position: relative;
+  top: 100%; /* Ajusta la posición del botón para que esté debajo del header */
+  left: 0; /* Ajusta la posición del botón para que esté a la izquierda */
+  background-color: #0e0eec;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: -10px; /* Ajusta el margen del botón para que esté pegado al header */
 }
 
-.inicio-button:hover {
-    background-color: #0056b3;
+header {
+  width: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Ajusta el padding del header para que no haya espacio entre el header y el botón */
+  position: relative;
+  overflow: hidden;
 }
