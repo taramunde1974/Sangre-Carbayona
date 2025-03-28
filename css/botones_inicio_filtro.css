@@ -7,16 +7,15 @@
 }
 
 .inicio-button {
-  position: relative;
-  top: 100%; /* Ajusta la posición del botón para que esté debajo del header */
-  left: 0; /* Ajusta la posición del botón para que esté a la izquierda */
-  background-color: #0e0eec;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: -10px; /* Ajusta el margen del botón para que esté pegado al header */
+    display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+    background-color: #0e0eec;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0; /* Espacio arriba y abajo del botón */
+    text-align: center; /* Centra el texto del botón */
 }
 
 header {
