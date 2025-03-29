@@ -73,43 +73,38 @@
 		var $sidebar = $('#sidebar'),
 			$sidebar_inner = $sidebar.children('.inner');
 
-		// Inactive by default on <= large.
-			breakpoints.on('<=large', function() {
-				$sidebar.addClass('inactive');
-			});
-
-			breakpoints.on('>large', function() {
-				$sidebar.removeClass('inactive');
-			});
-
-		// Hack: Workaround for Chrome/Android scrollbar position bug.
-			if (browser.os == 'android'
-			&&	browser.name == 'chrome')
-				$('<style>#sidebar .inner::-webkit-scrollbar { display: none; }</style>')
-					.appendTo($head);
+		
 
 		// Toggle.
-			$('<a href="#sidebar" class="toggle">Toggle</a>')
-				.appendTo($sidebar)
-				.on('click', function(event) {
-
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Toggle.
-						$sidebar.toggleClass('inactive');
-
-				});
+                     $('<a href="#sidebar" class="toggle">Toggle</a>')
+                      .appendTo($sidebar)
+                      .on('click', function(event) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      $sidebar.toggleClass('active');
+           });
 
 		// Events.
 
 			// Link clicks.
-				$sidebar.on('click', 'a', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
+$sidebar.on('click', 'a', function(event) {
+  if (breakpoints.active('>large'))
+    return;
+  event.preventDefault();
+  event.stopPropagation();
+  var $a = $(this),
+      href = $a.attr('href'),
+      target = $a.attr('target');
+  if (!href || href == '#' || href == '')
+    return;
+  $sidebar.removeClass('active');
+  setTimeout(function() {
+    if (target == '_blank')
+      window.open(href);
+    else
+      window.location.href = href;
+  }, 500);
+});
 
 					// Vars.
 						var $a = $(this),
@@ -140,28 +135,18 @@
 				});
 
 			// Prevent certain events inside the panel from bubbling.
-				$sidebar.on('click touchend touchstart touchmove', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
-
-					// Prevent propagation.
-						event.stopPropagation();
-
-				});
+$sidebar.on('click touchend touchstart touchmove', function(event) {
+  if (breakpoints.active('>large'))
+    return;
+  event.stopPropagation();
+});
 
 			// Hide panel on body click/tap.
-				$body.on('click touchend', function(event) {
-
-					// >large? Bail.
-						if (breakpoints.active('>large'))
-							return;
-
-					// Deactivate.
-						$sidebar.addClass('inactive');
-
-				});
+$body.on('click touchend', function(event) {
+  if (breakpoints.active('>large'))
+    return;
+  $sidebar.removeClass('active');
+});
 
 		// Scroll lock.
 		// Note: If you do anything to change the height of the sidebar's content, be sure to
