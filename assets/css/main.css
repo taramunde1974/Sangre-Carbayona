@@ -1933,6 +1933,9 @@ button,
   font-size: 0.9em;
   position: relative;
   width: 26em; }
+  #sidebar.active {
+  margin-left: 0; /* Visible cuando tiene active */
+}
   #sidebar h2 {
     font-size: 1.38889em; }
   #sidebar > .inner {
