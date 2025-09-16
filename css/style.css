@@ -90,6 +90,9 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin-top: 20px; /* Añadido para bajar la imagen */
+    position: relative;
+    z-index: 1;
 }
 
 header nav.nav-menu {
