@@ -17,22 +17,24 @@ header {
     padding: 1rem 0;
 }
 
-/* Sticky Header para el logo y hamburguesa */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #f4f4f4;
-    z-index: 1000;
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 20px 5% 0;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    flex-basis: 50%;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -46,19 +48,6 @@ header {
     color: #003366;
     font-size: 1.8em;
     line-height: 1;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5% 0;
-    flex-wrap: wrap;
-    margin-top: 70px; /* Espacio para el sticky-header */
-}
-
-.header-left {
-    flex-basis: 50%;
 }
 
 .club-name-subtitle {
@@ -211,43 +200,42 @@ footer {
     color: #003366;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 /* Media Queries para Responsive */
 
 /* Tablets (768px - 1024px) */
-@media (max-width:  podstawowych
+@media (max-width: 1024px) {
+    .header-content {
+        padding: 15px 3%;
+    }
 
-.header-content {
-    padding: 15px 3%;
-}
+    .logo-container h2 {
+        font-size: 1.5em;
+    }
 
-.logo-container h2 {
-    font-size: 1.5em;
-}
+    .main-phrase p {
+        font-size: 2em;
+    }
 
-.main-phrase p {
-    font-size: 2em;
-}
+    .header-left {
+        flex-basis: 55%;
+    }
 
-.header-left {
-    flex-basis: 55%;
-}
+    .header-right {
+        flex-basis: 40%;
+    }
 
-.header-right {
-    flex-basis: 40%;
-}
-
-nav.nav-menu ul li {
-    margin: 0 10px;
+    nav.nav-menu ul li {
+        margin: 0 10px;
+    }
 }
 
 /* Móviles (<768px) */
 @media (max-width: 767px) {
-    body {
-        padding-top: 70px; /* Espacio para el sticky-header */
-    }
-
     .header-content {
         flex-direction: column;
         align-items: center;
@@ -282,7 +270,7 @@ nav.nav-menu ul li {
         margin: 10px auto;
     }
 
-    /* Menú hamburguesa */
+    /* Menú hamburguesa mejorado */
     .hamburger {
         display: block;
     }
@@ -290,7 +278,7 @@ nav.nav-menu ul li {
     nav.nav-menu {
         display: none;
         position: absolute;
-        top: 70px; /* Ajustado para abrir justo debajo del sticky-header */
+        top: 120px; /* Ajustado para abrir más abajo y no tapar el logo ni el título */
         left: 0;
         width: 100%;
         background-color: #003366;
@@ -324,4 +312,4 @@ nav.nav-menu ul li {
         padding: 15px;
         font-size: 0.9em;
     }
-    }
+}
