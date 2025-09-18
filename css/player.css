@@ -1,1 +1,49 @@
+/* Estilos para etiquetas (tags) */
+.player-tags {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
 
+.player-tags h2 {
+    color: #003366;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.player-tags ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.player-tags li {
+    background-color: #003366;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.player-tags li:hover {
+    background-color: #0057b8;
+    cursor: pointer; /* Para futuro JS de filtro */
+}
+
+@media (max-width: 767px) {
+    .player-tags ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-tags li {
+        width: 80%;
+        text-align: center;
+    }
+}
