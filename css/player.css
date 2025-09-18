@@ -3,6 +3,7 @@ body {
     position: relative;
     min-height: 100vh;
     width: 100%;
+    background: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -483,18 +484,19 @@ body {
 .tg {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 80%;
-    max-width: 600px;
+    width: 90%; /* Aumentado para aprovechar más el ancho */
+    max-width: 800px; /* Mayor límite para pantallas grandes */
     margin: 20px auto;
     background-size: cover;
     background-position: center;
     color: #ffffff;
+    table-layout: auto; /* Permite que las celdas se ajusten al contenido */
 }
 
 .tg td, .tg th {
     border: 1px solid #ffffff;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px 15px; /* Más espacio para mejor legibilidad */
+    font-size: 18px; /* Tamaño de fuente aumentado */
     font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -520,11 +522,58 @@ body {
 }
 
 .tg td.tg-lqy6 img {
-    width: 48px;
-    height: 28px;
-    margin-right: 5px;
+    width: 60px; /* Aumentado para mejor visibilidad */
+    height: 35px; /* Ajustado proporcionalmente */
+    margin-right: 8px;
 }
 
 .tg td.tg-lqy6 img[src*="Las-Palmas.jpg"] {
-    height: 48px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
+    .tg {
+        width: 95%; /* Más ancho en móviles */
+        max-width: none; /* Sin límite máximo en móviles */
+        font-size: 16px; /* Fuente más pequeña en móviles */
+    }
+
+    .tg td, .tg th {
+        padding: 8px 10px; /* Menos padding en móviles */
+        font-size: 16px;
+    }
+
+    .tg td.tg-lqy6 img {
+        width: 48px; /* Tamaño reducido para imágenes en móviles */
+        height: 28px;
+    }
+
+    .tg td.tg-lqy6 img[src*="Las-Palmas.jpg"] {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tg {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        font-size: 14px; /* Fuente aún más pequeña para pantallas muy pequeñas */
+    }
+
+    .tg td, .tg th {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .tg td.tg-lqy6 img {
+        width: 40px;
+        height: 24px;
+    }
+
+    .tg td.tg-lqy6 img[src*="Las-Palmas.jpg"] {
+        width: 40px;
+        height: 40px;
+    }
 }
