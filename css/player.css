@@ -1,187 +1,506 @@
-/* Estilos para todas las páginas de jugadores - player.css */
+/* Estilos generales para el cuerpo */
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #0e0eec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
 
-/* Header fijo (sticky) */
-.sticky-header {
-    position: fixed;
+/* Estilos generales para la tarjeta */
+#card {
+    position: relative;
+    color: #725b16;
+    width: 270px;
+    height: 430px;
+    background: #ddd;
+    margin: auto;
+    -webkit-clip-path: url("#svgPath");
+    clip-path: url("#svgPath");
+    display: block;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotateY(-180deg);
+}
+
+/* Contenedor interno de la tarjeta */
+#card #card-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #aaa;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sección superior de la tarjeta */
+#card #card-inner #card-top {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 54%;
+    background: linear-gradient(135deg, #a7c7fd 0%, #0e0eec 100%);
+    overflow: hidden;
 }
 
-.sticky-header.hidden {
-    transform: translateY(-100%);
+/* Fuente de fondo en la parte superior */
+#card #card-inner #card-top .backfont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    font-size: 130px;
+    letter-spacing: -5px;
     opacity: 0;
+    font-weight: 700;
+    font-style: italic;
+    color: #d3d3d3;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
 }
 
-/* Ajuste para el main */
-main {
-    margin-top: 120px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Imagen en la parte superior */
+#card #card-inner #card-top .image {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    z-index: 2;
+    height: 75%;
+    width: 70%;
+    opacity: 0;
+    transition: all 1.5s ease-out 3s;
 }
 
-/* Estilos para la ficha del jugador */
-.player-profile {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+/* Estilo para la imagen dentro del contenedor .image */
+#card #card-inner #card-top .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
-.player-profile h1 {
-    color: #003366;
+/* Lazo negro en la parte superior */
+#card #card-inner #card-top .black-ribbon {
+    position: absolute;
+    left: 85px;
+    top: 2px;
+    z-index: 4;
+    height: 30%;
+    width: 30%;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: all 1.5s ease-out 3s;
+}
+
+/* Estilo para la imagen del lazo negro */
+#card #card-inner #card-top .black-ribbon img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Información en la parte superior */
+#card #card-inner #card-top .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    height: 75%;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 7px 20px 0;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5em;
+    text-transform: uppercase;
 }
 
-.player-header {
+/* Elementos dentro de la información */
+#card #card-inner #card-top .info div {
+    position: relative;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-size: 20px;
+    opacity: 0;
+    top: 20px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+/* Posición en la información */
+#card #card-inner #card-top .info div.position {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    transition-delay: 1.25s;
+    margin-bottom: 10px;
+}
+
+/* País en la información */
+#card #card-inner #card-top .info div.country {
+    transition-delay: 1.5s;
+    padding-bottom: 5px;
+    font-weight: 700;
+    margin: 0 auto 5px;
+    border-bottom: none;
+}
+
+/* Región en la información */
+#card #card-inner #card-top .info div.region {
+    transition-delay: 1.75s;
+    margin: 0 auto 10px;
+}
+
+/* Club en la información */
+#card #card-inner #card-top .info div.club {
+    transition-delay: 2s;
+    margin: 3px auto;
+    margin-left: -11px;
+}
+
+/* Tamaño y posición de los elementos de información */
+#card #card-inner #card-top .info div.country,
+#card #card-inner #card-top .info div.region {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 30px;
+}
+
+#card #card-inner #card-top .info div.club {
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 43px;
+}
+
+/* Imágenes dentro de los elementos de información */
+#card #card-inner #card-top .info div.country div,
+#card #card-inner #card-top .info div.region div,
+#card #card-inner #card-top .info div.club div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+/* Sección inferior de la tarjeta */
+#card #card-inner #card-bottom {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46%;
+    background: #0e0eec;
+}
+
+/* Borde superior de la sección inferior */
+#card #card-inner #card-bottom:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+}
+
+/* Nombre en la sección inferior */
+#card #card-inner #card-bottom .name {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0;
+    top: -5px;
+    position: relative;
+    transition: all 0.5s ease-out 3.2s;
+    margin: 4px 0;
+}
+
+/* Estadísticas en la sección inferior */
+#card #card-inner #card-bottom .stats {
+    position: relative;
+    margin: 0 20px;
+    padding-top: 10px;
+    border-top: 4px solid transparent;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    color: #d4af37;
 }
 
-.player-profile-img {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* Ajuste de margen para el primer elemento de estadísticas */
+#card #card-inner #card-bottom .stats div:first-child {
+    margin-left: -5px;
 }
 
-.player-info {
-    flex: 1;
-    margin-left: 20px;
-    min-width: 250px;
+/* Línea divisoria blanca (vertical) */
+#card #card-inner #card-bottom .stats:before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 39%;
+    transform: translateX(-50%);
+    height: 0;
+    width: 2px;
+    background: #ffffff;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+    z-index: 1;
 }
 
-.player-info p {
-    margin-bottom: 10px;
-    font-size: 1.1em;
+/* Línea horizontal decorativa */
+#card #card-inner #card-bottom .stats:after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 2px;
+    width: 0;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+    background: #ffffff;
 }
 
-.player-bio {
-    margin-bottom: 30px;
+/* Elementos dentro de las estadísticas */
+#card #card-inner #card-bottom .stats div {
+    width: 45%;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-.player-bio h2 {
-    color: #003366;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 10px;
+/* Ajuste de la columna derecha */
+#card #card-inner #card-bottom .stats div:last-child {
+    margin-right: 0;
+    padding-right: 3px;
+    text-align: left;
 }
 
-.player-stats {
-    margin-bottom: 30px;
-}
-
-.player-stats table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.player-stats th, .player-stats td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-.player-stats th {
-    background-color: #003366;
-    color: #fff;
-}
-
-.player-achievements {
-    margin-bottom: 30px;
-}
-
-.player-achievements ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.player-achievements li {
-    padding: 10px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    border-left: 4px solid #003366;
-}
-
-/* Estilos para etiquetas (tags) */
-.player-tags {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
-.player-tags h2 {
-    color: #003366;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.player-tags ul {
+/* Lista de elementos en las estadísticas */
+#card #card-inner #card-bottom .stats ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos de la lista en las estadísticas */
+#card #card-inner #card-bottom .stats ul li {
+    margin: 0;
+    position: relative;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+    opacity: 0;
+    left: 20px;
+    white-space: nowrap;
+}
+
+/* Ajuste para la columna derecha */
+#card #card-inner #card-bottom .stats div:last-child ul li {
+    left: -20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Transiciones para elementos específicos de la lista */
+#card #card-inner #card-bottom .stats ul li:nth-child(2) {
+    transition-delay: 2.2s;
+}
+
+#card #card-inner #card-bottom .stats ul li:nth-child(3) {
+    transition-delay: 2.4s;
+}
+
+/* Elementos de texto dentro de la lista */
+#card #card-inner #card-bottom .stats ul li span {
+    position: relative;
+    display: inline-block;
+}
+
+/* Ajuste para el primer span en la lista */
+#card #card-inner #card-bottom .stats ul li span:first-child {
+    font-weight: 700;
+    width: auto;
+    min-width: 35px;
+    margin-right: 8px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Ajuste específico para "Temp" */
+#card #card-inner #card-bottom .stats ul li:first-child span:first-child {
+    margin-right: 5px;
+}
+
+/* Ajuste para los spans en la columna derecha */
+#card #card-inner #card-bottom .stats div:last-child ul li span:first-child {
+    margin-right: 2px;
+    width: auto;
+    min-width: 35px;
+}
+
+#card #card-inner #card-bottom .stats div:last-child ul li span:last-child {
+    width: auto;
+    text-align: left;
+}
+
+/* Texto en minúsculas */
+#card #card-inner #card-bottom .stats ul li span.text-lower {
+    text-transform: none;
+}
+
+/* Estilo para los valores de stats */
+#card #card-inner #card-bottom .stats ul li span:last-child {
+    width: auto;
+    margin-left: 2px;
+    white-space: nowrap;
+}
+
+/* Estado activo de la tarjeta */
+#card.active {
+    display: block;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+/* Imagen en estado activo */
+#card.active #card-inner #card-top .image {
+    right: 0;
+    opacity: 1;
+}
+
+/* Lazo negro en estado activo */
+#card.active #card-inner #card-top .black-ribbon {
+    opacity: 1;
+    right: -15px;
+}
+
+/* Fuente de fondo en estado activo */
+#card.active #card-inner #card-top .backfont {
+    opacity: 0.2;
+}
+
+/* Información en estado activo */
+#card.active #card-inner #card-top .info div {
+    opacity: 1;
+    top: 0;
+}
+
+/* Imágenes dentro de la información en estado activo */
+#card.active #card-inner #card-top .info div.country div,
+#card.active #card-inner #card-top .info div.region div,
+#card.active #card-inner #card-top .info div.club div {
+    opacity: 1;
+}
+
+/* Borde superior de las estadísticas en estado activo */
+#card.active #card-inner #card-bottom .stats {
+    border-top: 4px solid #ffffff;
+}
+
+/* Líneas decorativas en estado activo */
+#card.active #card-inner #card-bottom .stats:after {
+    width: 70%;
+}
+
+#card.active #card-inner #card-bottom .stats:before {
+    height: 100%;
+}
+
+/* Elementos de la lista en estado activo */
+#card.active #card-inner #card-bottom .stats ul li {
+    opacity: 1;
+    left: 0;
+}
+
+/* Nombre en estado activo */
+#card.active #card-inner #card-bottom .name {
+    opacity: 1;
+    top: 0;
+}
+
+/* Contenedor del ribbon */
+.ribbon-container {
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.player-tags li {
-    background-color: #003366;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
+/* Estilos para el ribbon */
+.ribbon {
+    font-size: 28px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    --c: #0e0eec;
+    --r: .8em;
+    --a: 60deg;
+    --d: .5em;
+    padding-inline: .3em;
+    margin: 0;
+    line-height: 1.75;
+    background: var(--c);
+    width: fit-content;
+    position: relative;
+    white-space: nowrap;
 }
 
-.player-tags li:hover {
-    background-color: #0057b8;
-    cursor: pointer;
+/* Pseudo-elementos del ribbon */
+.ribbon:before,
+.ribbon:after {
+    content: "";
+    position: absolute;
+    width: calc(1lh + var(--d));
+    height: calc(1.5lh + var(--r));
+    top: 0;
+    border: solid var(--c);
+    box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
-    main {
-        margin-top: 100px;
-        padding: 10px;
-    }
+.ribbon:before {
+    left: 99%;
+    border-width: 1lh 1lh 0 0;
+    border-radius: 0 999px 0 0;
+    clip-path: polygon(
+        calc(999px*cos(var(--a))) calc(1lh + var(--d) - 999px*sin(var(--a))),
+        999px 100%,
+        100% 100%,
+        calc(50% + var(--d)/2) calc(100% - var(--r)),
+        var(--d) 100%,
+        0 100%,
+        0 calc(1lh + var(--d))
+    );
+    transform-origin: 0 calc(1lh + var(--d));
+    rotate: calc(var(--a) - 90deg);
+}
 
-    .player-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .player-info {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .player-profile-img {
-        width: 200px;
-        height: 280px;
-    }
-
-    .player-tags ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .player-tags li {
-        width: 80%;
-        text-align: center;
-    }
+.ribbon:after {
+    right: 99%;
+    border-width: 1lh 0 0 1lh;
+    border-radius: 999px 0 0 0;
+    clip-path: polygon(
+        calc(100% - 999px*cos(var(--a))) calc(1lh + var(--d) - 999px*sin(var(--a))),
+        -999px 100%,
+        0 100%,
+        calc(50% - var(--d)/2) calc(100% - var(--r)),
+        calc(100% - var(--d)) 100%,
+        100% 100%,
+        100% calc(1lh + var(--d))
+    );
+    transform-origin: 100% calc(1lh + var(--d));
+    rotate: calc(90deg - var(--a));
 }
