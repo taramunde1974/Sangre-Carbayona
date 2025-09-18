@@ -5,9 +5,11 @@ body {
     width: 100%;
     background: #0e0eec;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     font-family: "Roboto Condensed", sans-serif;
+    color: #ffffff;
 }
 
 /* Estilos generales para la tarjeta */
@@ -79,27 +81,6 @@ body {
 
 /* Estilo para la imagen dentro del contenedor .image */
 #card #card-inner #card-top .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-/* Lazo negro en la parte superior */
-#card #card-inner #card-top .black-ribbon {
-    position: absolute;
-    left: 85px;
-    top: 2px;
-    z-index: 4;
-    height: 30%;
-    width: 30%;
-    opacity: 0;
-    transform: rotate(45deg);
-    transition: all 1.5s ease-out 3s;
-}
-
-/* Estilo para la imagen del lazo negro */
-#card #card-inner #card-top .black-ribbon img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -383,12 +364,6 @@ body {
     opacity: 1;
 }
 
-/* Lazo negro en estado activo */
-#card.active #card-inner #card-top .black-ribbon {
-    opacity: 1;
-    right: -15px;
-}
-
 /* Fuente de fondo en estado activo */
 #card.active #card-inner #card-top .backfont {
     opacity: 0.2;
@@ -503,4 +478,54 @@ body {
     );
     transform-origin: 100% calc(1lh + var(--d));
     rotate: calc(90deg - var(--a));
+}
+
+/* Estilos para la tabla */
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.tg td, .tg th {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.tg th.tg-u0o7, .tg th.tg-wp8o {
+    background: rgba(14, 14, 236, 0.8);
+    font-weight: bold;
+    text-align: left;
+}
+
+.tg td.tg-0lax {
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+}
+
+.tg td.tg-lqy6 {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.tg td.tg-lqy6 div {
+    display: flex;
+    align-items: center;
+}
+
+.tg td.tg-lqy6 img {
+    width: 48px;
+    height: 28px;
+    margin-right: 5px;
+}
+
+.tg td.tg-lqy6 img[src*="Las-Palmas.jpg"] {
+    height: 48px;
 }
